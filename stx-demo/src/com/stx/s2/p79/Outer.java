@@ -30,7 +30,6 @@ public class Outer {
 
 		// 创建内部类对象
 		Outer.Inner inner = outer.new Inner();
-
 	}
 
 }
