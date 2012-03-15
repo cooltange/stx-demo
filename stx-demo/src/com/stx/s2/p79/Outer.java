@@ -1,7 +1,7 @@
 package com.stx.s2.p79;
 
 /**
- * Íâ²¿Àà
+ * å¤–éƒ¨ç±»
  * 
  * @author getan
  * 
@@ -10,7 +10,7 @@ public class Outer {
 	private int i = 1;
 
 	/**
-	 * ÄÚ²¿Àà
+	 * å†…éƒ¨ç±»
 	 * 
 	 * @author getan
 	 */
@@ -18,8 +18,8 @@ public class Outer {
 		int i;
 
 		Inner() {
-			// ÄÚ²¿Àà¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàµÄ³ÉÔ±
-			// µ±ÄÚ²¿ÀàÊôĞÔÓëÍâ²¿ÀàÊôĞÔÖØÃûÊ±¿ÉÊ¹ÓÃOuter.thisÒıÓÃÍâ²¿ÊµÀı
+			// å†…éƒ¨ç±»å¯ä»¥ç›´æ¥è®¿é—®å¤–éƒ¨ç±»çš„æˆå‘˜
+			// å½“å†…éƒ¨ç±»å±æ€§ä¸å¤–éƒ¨ç±»å±æ€§é‡åæ—¶å¯ä½¿ç”¨Outer.thiså¼•ç”¨å¤–éƒ¨å®ä¾‹
 			this.i = Outer.this.i * 2;
 		}
 
@@ -28,7 +28,7 @@ public class Outer {
 	public static void main(String[] args) {
 		Outer outer = new Outer();
 
-		// ´´½¨ÄÚ²¿Àà¶ÔÏó
+		// åˆ›å»ºå†…éƒ¨ç±»å¯¹è±¡
 		Outer.Inner inner = outer.new Inner();
 	}
 
