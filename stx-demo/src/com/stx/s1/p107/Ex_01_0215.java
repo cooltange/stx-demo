@@ -9,7 +9,6 @@ import java.util.Scanner;
  * @author qinguoqiang
  *
  */
-
 public class Ex_01_0215 {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
