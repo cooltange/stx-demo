@@ -6,6 +6,9 @@ package com.stx.s2.p84;
  * @author getan
  * 
  */
+
+
+
 public enum SeasonEnum {
 	SPRING, SUMMER, FALL, WINTER;
 }
