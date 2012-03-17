@@ -20,6 +20,7 @@ public class P108 {
 		} finally {// 异常处理的统一出口
 			// 无论try块是否抛出异常,finally块类的代码都会被执行
 			System.out.println("finally块被执行");
+			
 		}
 	}
 
