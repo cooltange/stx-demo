@@ -15,7 +15,7 @@ public class TestAnonymous {
 		TestAnonymous ta = new TestAnonymous();
 		// 非匿名方式
 		GraphicCard gc = new GraphicCard();
-		ta.test(new GraphicCard());
+		ta.test(gc);
 
 		// 调用test方法时，需要传入一个Product参数，此处传入其匿名实现类的实例
 		ta.test(new Product() {
