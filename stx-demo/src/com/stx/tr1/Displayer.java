@@ -31,14 +31,17 @@ public class Displayer {
 		// 声明字符缓冲输出流对象
 		BufferedWriter bw = null;
 
+		Reader reader = null;
+		Writer writer = null;
+
 		try {
 			// 字节输入流 => 字符输入流
-			Reader reader = new InputStreamReader(new FileInputStream(file)); // 文件
+			reader = new InputStreamReader(new FileInputStream(file)); // 文件
 			// 将普通Reader包装成BufferedReader
 			br = new BufferedReader(reader);
 
 			// 字节输出流 => 字符输出流
-			Writer writer = new OutputStreamWriter(System.out); // 控制台
+			writer = new OutputStreamWriter(System.out); // 控制台
 			// 将普通Writer包装成BufferedWriter
 			bw = new BufferedWriter(writer);
 
@@ -53,10 +56,16 @@ public class Displayer {
 			}
 		} finally {
 			// 关闭输入流
+			if (reader != null) {
+				reader.close();
+			}
 			if (br != null) {
 				br.close();
 			}
 			// 清空输出流缓存
+			if (writer != null) {
+				writer.flush();
+			}
 			if (bw != null) {
 				bw.flush();
 			}
