@@ -18,8 +18,8 @@ public class Ex_01_0405 {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			Date d = new Date();
-			System.out.println(one.getName() + d.toLocaleString() + "进行了转帐操作");
+			Date date = new Date();
+			System.out.println(one.getName() + date.toString() + "进行了转帐操作");
 		}
 
 	}
