@@ -8,7 +8,7 @@ package com.stx.s2.p84;
  */
 
 
-
+//Ã¶¾Ù
 public enum SeasonEnum {
 	SPRING, SUMMER, FALL, WINTER;
 }
