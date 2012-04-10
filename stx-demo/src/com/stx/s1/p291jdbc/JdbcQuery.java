@@ -14,7 +14,7 @@ public class JdbcQuery {
 		ResultSet rs = null;
 		try {
 			connection = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl", "stx2", "stx2");
+					"jdbc:oracle:thin:@localhost:1521:orcl", "stx", "stx");
 
 			stmt = connection.createStatement();
 

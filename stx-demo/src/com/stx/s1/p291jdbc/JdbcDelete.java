@@ -2,7 +2,6 @@ package com.stx.s1.p291jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -15,7 +14,7 @@ public class JdbcDelete {
 		int count = 0;
 		try {
 			connection = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl", "stx2", "stx2");
+					"jdbc:oracle:thin:@localhost:1521:orcl", "stx", "stx");
 			stmt = connection.createStatement();
 
 			String sql = "delete from STUDENT";

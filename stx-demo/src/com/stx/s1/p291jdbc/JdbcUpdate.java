@@ -14,7 +14,7 @@ public class JdbcUpdate {
 		int count = 0;
 		try {
 			connection = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl", "stx2", "stx2");
+					"jdbc:oracle:thin:@localhost:1521:orcl", "stx", "stx");
 			stmt = connection.createStatement();
 
 			String sql = "update student set sname='Õı–°ŒÂ' where sno='s019'";

@@ -14,7 +14,7 @@ public class JdbcInsert {
 		int count = 0;
 		try {
 			connection = DriverManager.getConnection(
-					"jdbc:oracle:thin:@localhost:1521:orcl", "stx2", "stx2");
+					"jdbc:oracle:thin:@localhost:1521:orcl", "stx", "stx");
 			stmt = connection.createStatement();
 
 			String sql = "insert into student values('s011','王小五','22','女')";
