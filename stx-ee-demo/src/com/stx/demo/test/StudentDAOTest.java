@@ -1,7 +1,5 @@
 package com.stx.demo.test;
 
-import java.sql.SQLException;
-
 import com.stx.demo.dao.StudentDao;
 import com.stx.demo.dao.impl.StudentDaoImpl;
 import com.stx.demo.vo.StudentVO;
@@ -20,7 +18,7 @@ public class StudentDAOTest {
 		vo.setSsex("男");
 
 		int count = dao.insertStudent(vo);
-		
+
 		System.out.println(count);
 
 	}
