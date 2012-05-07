@@ -49,37 +49,6 @@ public class JdbcUtil {
 		return con;
 	}
 
-	public static void printRs(ResultSet rs) {
-		if (rs == null) {
-			System.out.println("resultset is null");
-			return;
-		}
-		try {
-			StringBuffer sb = new StringBuffer();
-			ResultSetMetaData md = rs.getMetaData();
-			int cols = md.getColumnCount();
-
-			for (int i = 1; i <= cols; i++) {
-				sb.append(md.getColumnName(i) + "->");
-				sb.append(md.getColumnType(i) + "&");
-				sb.append(md.getColumnTypeName(i) + " "
-						+ md.getColumnDisplaySize(i) + "\n");
-			}
-			sb.append("\n\n");
-
-			while (rs.next()) {
-				for (int i = 1; i <= cols; i++) {
-					sb.append(md.getColumnName(i) + "=");
-					sb.append(rs.getString(i) + " ");
-				}
-				sb.append("\n");
-			}
-			System.out.println(sb.toString());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 	public static void release() {
 		try {
 			if (rs != null)

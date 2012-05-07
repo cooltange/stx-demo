@@ -20,7 +20,7 @@ public class StudentDaoImpl implements StudentDao {
 		ResultSet rs = ps.executeQuery();
 
 		List<StudentVO> stuList = new ArrayList<StudentVO>();
-
+		
 		while (rs.next()) {
 
 			StudentVO vo = new StudentVO();
@@ -33,7 +33,7 @@ public class StudentDaoImpl implements StudentDao {
 			stuList.add(vo);
 
 		}
-
+		
 		return stuList;
 
 	}
