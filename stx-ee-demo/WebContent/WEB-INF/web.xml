@@ -3,10 +3,18 @@
   <display-name>stx-ee-demo</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+    <description>学生信息查询Servlet</description>
+    <display-name>StudentQueryServlet</display-name>
+    <servlet-name>StudentQueryServlet</servlet-name>
+    <servlet-class>com.stx.demo.servlet.StudentQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentQueryServlet</servlet-name>
+    <url-pattern>/studentQuery</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
