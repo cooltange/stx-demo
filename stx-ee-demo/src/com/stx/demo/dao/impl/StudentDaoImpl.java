@@ -50,7 +50,7 @@ public class StudentDaoImpl implements StudentDao {
 			// 将该学生对象 添入 学生信息列表对象
 			stuList.add(vo);
 		}
-		// 释放数据库连接资源
+		// 释放数据库连接资源(切勿忘记)
 		JdbcUtil.release();
 		
 		// 返回学生信息列表对象(给servlet)
