@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>stx-ee演示首页</title>
-<link href="${pageContext.request.contextPath}/css/yui.css"
+<link href="<%=request.getContextPath()%>/css/yui.css"
 	type="text/css" rel="stylesheet" />
-<link href="${pageContext.request.contextPath}/css/style.css"
+<link href="<%=request.getContextPath()%>/css/style.css"
 	type="text/css" rel="stylesheet" />
 </head>
 <body>
