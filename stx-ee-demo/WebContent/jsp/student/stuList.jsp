@@ -5,7 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>学生信息列表</title>
-<!-- 部署的Web应用名 -->
+<!-- request.getContextPath()可以获得该项目的部署后的Web应用名,常用于获取项目资源(css,js,图片等)的绝对路径 -->
+<!-- <%=request.getContextPath()%>/css/yui.css 即路径 /stx-ee-demo/css/yui.css -->
 <link href="<%=request.getContextPath()%>/css/yui.css"
 	type="text/css" rel="stylesheet" />
 <link href="<%=request.getContextPath()%>/css/style.css"
@@ -15,11 +16,12 @@
 	<h3>学生信息列表</h3>
 		<table>
 		<%
+		// 从request中获取学生信息列表对象
 		ArrayList<StudentVO> stuList = (ArrayList<StudentVO>)request.getAttribute("stuList");
+		// 遍历学生信息列表
 		for(StudentVO stuVO : stuList)
 		{
 		%>
-
 		<tr>
 			<td><%=stuVO.getSno()%>&nbsp;</td>
 			<td><%=stuVO.getSname()%>&nbsp;</td>
@@ -30,9 +32,7 @@
 				href="studentDel?id=<%=stuVO.getSno()%>">删除</a>
 			</td>
 		</tr>
-
 		<%} %>
-
 	</table>
 	<!-- 使用js的history(历史对象)的back方法或者go(-1)完成返回功能 -->
 	<input type="button" onclick="history.back();" value="返回">
