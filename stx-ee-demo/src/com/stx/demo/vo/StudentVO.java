@@ -7,10 +7,13 @@ package com.stx.demo.vo;
  * 
  */
 public class StudentVO {
-
+	// 学号
 	private String sno;
+	// 姓名
 	private String sname;
+	// 年龄
 	private int sage;
+	// 性别
 	private String ssex;
 
 	public String getSno() {
