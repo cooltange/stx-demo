@@ -16,13 +16,17 @@ import com.stx.demo.vo.StudentVO;
 /**
  * 学生信息查询Servlet
  * 
- * Servlet implementation class StudentQueryServlet
  */
 public class StudentQueryServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	// 学生Dao对象
 	StudentDao dao = null;
 
+	/**
+	 * 初始化方法
+	 * 
+	 * 将初始化dao对象的操作放入init()方法,可保证dao只被创建一次
+	 */
 	@Override
 	public void init() throws ServletException {
 		// 初始化学生Dao对象
