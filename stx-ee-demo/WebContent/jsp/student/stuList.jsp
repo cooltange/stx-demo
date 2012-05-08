@@ -11,7 +11,8 @@
 	type="text/css" rel="stylesheet" />
 </head>
 <body>
-	<table>
+	<h3>学生信息列表</h3>
+		<table>
 		<%
 		ArrayList<StudentVO> stuList = (ArrayList<StudentVO>)request.getAttribute("stuList");
 		for(StudentVO stuVO : stuList)
@@ -32,5 +33,8 @@
 		<%} %>
 
 	</table>
+	<!-- 使用js的history(历史对象)的back方法或者go(-1)完成返回功能 -->
+	<input type="button" onclick="history.back();" value="返回">
+	
 </body>
 </html>
