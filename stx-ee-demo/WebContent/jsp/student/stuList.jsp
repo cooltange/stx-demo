@@ -15,6 +15,13 @@
 <body>
 	<h3>学生信息列表</h3>
 		<table>
+		<tr>
+		<td>编号</td>
+		<td>姓名</td>
+		<td>年龄</td>
+		<td>性别</td>
+		<td>操作</td>
+		</tr>
 		<%
 		// 从request中获取学生信息列表对象
 		ArrayList<StudentVO> stuList = (ArrayList<StudentVO>)request.getAttribute("stuList");
