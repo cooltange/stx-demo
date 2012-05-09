@@ -16,11 +16,11 @@
 	<h3>学生信息列表</h3>
 		<table>
 		<tr>
-		<td>编号</td>
-		<td>姓名</td>
-		<td>年龄</td>
-		<td>性别</td>
-		<td>操作</td>
+		<th>编号</th>
+		<th>姓名</th>
+		<th>年龄</th>
+		<th>性别</th>
+		<th>操作</th>
 		</tr>
 		<%
 		// 从request中获取学生信息列表对象
