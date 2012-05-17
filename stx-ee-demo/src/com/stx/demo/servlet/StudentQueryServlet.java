@@ -67,7 +67,8 @@ public class StudentQueryServlet extends HttpServlet {
 			// 通过ServletContext对象获取RequestDispatcher对象
 			// 通过ServletContext对象获得的路径是 相对Web应用根的路径,即绝对路径.
 			RequestDispatcher rd = getServletContext().getRequestDispatcher(
-					"/jsp/student/stuList.jsp");
+					//"/jsp/student/stuList.jsp");
+					  "/jsp/student/stuListJSTL.jsp");// 使用了jstl标签的页面
 
 			// 请求转发给学生信息列表页面(/jsp/student/stuList.jsp)
 			rd.forward(request, response);
