@@ -13,7 +13,7 @@
 <body>
 	<div>
 		<h1>stx-ee演示</h1>
-		<a href="studentQuery">学生信息列表</a>
+		<a href="<%=request.getContextPath()%>/studentQuery">学生信息列表</a>
 	</div>
 </body>
 </html>
