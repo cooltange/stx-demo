@@ -9,6 +9,6 @@
 <title>struts1 欢迎页面</title>
 </head>
 <body>
-	${myName}
+	Hello ${loginForm.myName} !
 </body>
 </html>
