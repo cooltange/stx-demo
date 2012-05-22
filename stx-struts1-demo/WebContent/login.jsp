@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,15 +9,13 @@
 <title>struts1 登录演示</title>
 </head>
 <body>
-
-<html:form action="/login" method="post">
-
-	<html:text property="myName"></html:text>
 	
-	<html:submit></html:submit>
-
-</html:form>
-
+	<html:form action="/login" method="post">
+	 	<bean:message key="username"/>
+		<html:text property="myName"/>
+		<html:errors /><BR>
+		<html:submit value="提交"/>
+	</html:form>
 
 </body>
 </html>

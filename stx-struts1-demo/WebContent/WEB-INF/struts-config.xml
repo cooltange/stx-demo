@@ -6,17 +6,17 @@
 
 <struts-config>
 
-	<!-- ================================================ Form Bean Definitions -->
+	<!-- Form Bean Definitions -->
 	<form-beans>
 		<form-bean name="loginForm" type="com.stx.demo.struts1.form.LoginForm" />
 
 	</form-beans>
 
-	<!-- =========================================== Action Mapping Definitions -->
+	<!-- Action Mapping Definitions -->
 	<action-mappings>
 		<!-- "loginAction" action -->
 		<action path="/login" type="com.stx.demo.struts1.action.LoginAction"
-			name="loginForm" scope="request">
+			name="loginForm" scope="request" input="/login.jsp">
 
 			<!-- Forwards to Welcome.jsp -->
 			<forward name="welcome" path="/welcome.jsp"></forward>
@@ -24,6 +24,8 @@
 		</action>
 
 	</action-mappings>
+	
+	<message-resources parameter="messages"></message-resources>
 
 </struts-config>
 
