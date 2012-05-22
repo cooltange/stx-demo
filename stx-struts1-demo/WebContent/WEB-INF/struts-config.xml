@@ -18,7 +18,7 @@
 		<action path="/login" type="com.stx.demo.struts1.action.LoginAction"
 			name="loginForm" scope="request" input="/login.jsp">
 
-			<!-- Forwards to Welcome.jsp -->
+			<!-- Forwards to welcome.jsp -->
 			<forward name="welcome" path="/welcome.jsp"></forward>
 
 		</action>
