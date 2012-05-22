@@ -8,6 +8,7 @@ package com.stx.s2.p88;
  */
 public class P108 {
 
+	
 	public static void main(String[] args) {
 		try {
 			// String str = "100";
