@@ -9,11 +9,13 @@
 <title>struts1 登录演示</title>
 </head>
 <body>
-	
+	<html:errors/>
 	<html:form action="/login" method="post">
-	 	<bean:message key="username"/>
-		<html:text property="myName"/>
-		<html:errors /><BR>
+	 	用户名:
+		<html:text property="myName"/><BR>
+		密码&nbsp;&nbsp;&nbsp;&nbsp;:
+		<html:password property="myPassword"/>
+		<BR>
 		<html:submit value="提交"/>
 	</html:form>
 

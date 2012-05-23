@@ -19,7 +19,9 @@
 			name="loginForm" scope="request" input="/login.jsp">
 
 			<!-- Forwards to welcome.jsp -->
-			<forward name="welcome" path="/welcome.jsp"></forward>
+			<forward name="success" path="/welcome.jsp"></forward>
+			<!-- Forwards to login.jsp -->
+			<forward name="failure" path="/login.jsp"></forward>
 
 		</action>
 
