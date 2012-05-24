@@ -1,0 +1,46 @@
+<!DOCTYPE validators PUBLIC
+        "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+        "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="myName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>姓名必须输入!!!</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="trim">true</param>
+			<param name="minLength">6</param>
+			<param name="maxLength">12</param>
+			<message>姓名长度必须大于${minLength}位且小于${maxLength}位</message>
+		</field-validator>
+	</field>
+
+	<field name="myPassword">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>密码必须输入!!!</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="trim">true</param>
+			<param name="minLength">6</param>
+			<param name="maxLength">12</param>
+			<message>密码长度必须大于${minLength}位且小于${maxLength}位</message>
+		</field-validator>
+	</field>
+	
+	<field name="myAge">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">150</param>
+			<message>年龄必须在${min}~${max}之间!</message>
+		</field-validator>
+	</field>
+	
+	<field name="myEmail">
+		<field-validator type="email">
+			<message>Email地址非法!!!</message>
+		</field-validator>
+	</field>
+
+</validators>
