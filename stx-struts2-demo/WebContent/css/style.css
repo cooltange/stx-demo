@@ -1,0 +1,15 @@
+.formFieldError {
+	color: #FF3300;
+}
+
+.formFieldError ul {
+	list-style-type: none;
+	display: inline;
+	margin: 0px;
+	padding: 3px;
+}
+
+.formFieldError ul li {
+	list-style-type: none;
+	display: inline;
+}
