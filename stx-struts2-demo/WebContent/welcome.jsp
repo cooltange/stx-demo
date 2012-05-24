@@ -7,6 +7,6 @@
 <title>welcome</title>
 </head>
 <body>
-	${myName} 欢迎访问!
+	${requestScope.myName} 欢迎访问!
 </body>
 </html>
