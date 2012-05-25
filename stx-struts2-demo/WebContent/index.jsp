@@ -13,31 +13,31 @@
 </head>
 <body>
 	<s:form action="login" method="post">
-	请输入你的姓名:
+	<s:text name="name"/>
 	<s:textfield name="myName" />
 		<span class="formFieldError"> 
 			<s:fielderror fieldName="myName" />
 		</span>
 		<BR>
-	请输入你的密码:
+	<s:text name="password"/>
 	<s:password name="myPassword" />
 		<span class="formFieldError"> 
 			<s:fielderror fieldName="myPassword" />
 		</span>
 		<BR>
-	请输入你的年龄:
+	<s:text name="age"/>
 	<s:textfield name="myAge" />
 		<span class="formFieldError"> 
 			<s:fielderror fieldName="myAge" />
 		</span>
 		<BR>
-	请输入你的Email:
+	<s:text name="email"/>
 	<s:textfield name="myEmail" />
 		<span class="formFieldError"> 
 			<s:fielderror fieldName="myEmail" />
 		</span>
 		<BR>
-		<s:submit value="提交" />
+		<s:submit key="submit"/>
 	</s:form>
 
 

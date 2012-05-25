@@ -6,7 +6,7 @@
 	<field name="myName">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message>姓名必须输入!!!</message>
+			<message key="error.name.required"/>
 		</field-validator>
 		<field-validator type="stringlength">
 			<param name="trim">true</param>
@@ -19,7 +19,7 @@
 	<field name="myPassword">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message>密码必须输入!!!</message>
+			<message key="error.password.required"/>
 		</field-validator>
 		<field-validator type="stringlength">
 			<param name="trim">true</param>
