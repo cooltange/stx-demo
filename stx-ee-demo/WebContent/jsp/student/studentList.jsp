@@ -6,11 +6,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>学生信息列表(JSTL标签版)</title>
-<!-- request.getContextPath()可以获得该项目的部署后的Web应用名,常用于获取项目资源(css,js,图片等)的绝对路径 -->
-<!-- <%=request.getContextPath()%>/css/yui.css 即路径 /stx-ee-demo/css/yui.css -->
-<link href="<%=request.getContextPath()%>/css/yui.css" type="text/css"
+<!-- ${pageContext.request.contextPath}可以获得该项目的部署后的Web应用名,常用于获取项目资源(css,js,图片等)的绝对路径 -->
+<!-- ${pageContext.request.contextPath}/css/yui.css 即路径 /stx-ee-demo/css/yui.css -->
+<link href="${pageContext.request.contextPath}/css/yui.css" type="text/css"
 	rel="stylesheet" />
-<link href="<%=request.getContextPath()%>/css/style.css" type="text/css"
+<link href="${pageContext.request.contextPath}/css/style.css" type="text/css"
 	rel="stylesheet" />
 </head>
 <body>
@@ -40,12 +40,11 @@
 				<td>${student.ssex}</td>
 				
 				<td>&nbsp; 
-			<%-- <a href="studentDisp?id=${student.sno}&name=${student.sname}">查看</a> --%>
+			<%-- <a href="studentDisp?id=${student.sno}">查看</a> --%>
 			<!-- 使用url标签构建由servlet路径与参数列表的拼接后的url路径(更便于维护) -->
 			<a href="
 				<c:url value="studentDisp">
 					<c:param name="id" value="${student.sno}"/>
-					<c:param name="name" value="${student.sname}"/>
 				</c:url>"
 			>查看</a>
 			
