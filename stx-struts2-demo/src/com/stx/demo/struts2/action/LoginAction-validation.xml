@@ -3,11 +3,14 @@
         "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
 
 <validators>
+	<!-- 姓名 -->
 	<field name="myName">
+		<!-- 必填校验器 -->
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
 			<message key="error.name.required" />
 		</field-validator>
+		<!-- 字符串长度校验器 -->
 		<field-validator type="stringlength">
 			<param name="trim">true</param>
 			<param name="minLength">6</param>
@@ -17,10 +20,12 @@
 	</field>
 
 	<field name="myPassword">
+		<!-- 必填校验器 -->
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
 			<message key="error.password.required" />
 		</field-validator>
+		<!-- 字符串长度校验器 -->
 		<field-validator type="stringlength">
 			<param name="trim">true</param>
 			<param name="minLength">6</param>
@@ -30,6 +35,7 @@
 	</field>
 
 	<field name="myAge">
+		<!-- 整数校验器 -->
 		<field-validator type="int">
 			<param name="min">1</param>
 			<param name="max">150</param>
@@ -38,6 +44,7 @@
 	</field>
 
 	<field name="myEmail">
+		<!-- 邮箱地址校验器 -->
 		<field-validator type="email">
 			<message key="error.email.invalid" />
 		</field-validator>
