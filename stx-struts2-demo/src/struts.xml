@@ -12,8 +12,11 @@
 
 	<package name="demo" extends="struts-default">
 
-		<action name="login" class="com.stx.demo.struts2.action.LoginAction">
+		<action name="login" class="com.stx.demo.struts2.action.LoginAction" method="execute">
+			
 			<result name="success">welcome.jsp</result>
+			
+			<!-- 出现校验错误后返回的页面 -->
 			<result name="input">index.jsp</result>
 
 		</action>

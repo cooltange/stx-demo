@@ -12,6 +12,9 @@ public class LoginAction extends ActionSupport {
 	// 邮箱
 	private String myEmail;
 
+	/**  
+	 * 默认的action方法
+	 */
 	public String execute() {
 
 		return SUCCESS;
