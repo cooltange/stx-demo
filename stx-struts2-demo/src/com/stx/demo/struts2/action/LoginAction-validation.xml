@@ -6,40 +6,40 @@
 	<field name="myName">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message key="error.name.required"/>
+			<message key="error.name.required" />
 		</field-validator>
 		<field-validator type="stringlength">
 			<param name="trim">true</param>
 			<param name="minLength">6</param>
 			<param name="maxLength">12</param>
-			<message>姓名长度必须大于${minLength}位且小于${maxLength}位</message>
+			<message key="error.name.length.invalid" />
 		</field-validator>
 	</field>
 
 	<field name="myPassword">
 		<field-validator type="requiredstring">
 			<param name="trim">true</param>
-			<message key="error.password.required"/>
+			<message key="error.password.required" />
 		</field-validator>
 		<field-validator type="stringlength">
 			<param name="trim">true</param>
 			<param name="minLength">6</param>
 			<param name="maxLength">12</param>
-			<message>密码长度必须大于${minLength}位且小于${maxLength}位</message>
+			<message key="error.password.length.invalid" />
 		</field-validator>
 	</field>
-	
+
 	<field name="myAge">
 		<field-validator type="int">
 			<param name="min">1</param>
 			<param name="max">150</param>
-			<message>年龄必须在${min}~${max}之间!</message>
+			<message key="error.age.invalid" />
 		</field-validator>
 	</field>
-	
+
 	<field name="myEmail">
 		<field-validator type="email">
-			<message>Email地址非法!!!</message>
+			<message key="error.email.invalid" />
 		</field-validator>
 	</field>
 
