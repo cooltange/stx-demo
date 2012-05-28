@@ -1,6 +1,6 @@
 package com.stx.demo.spring.monitor;
 /**
- * Òº¾§ÏÔÊ¾Æ÷Àà
+ * æ¶²æ™¶æ˜¾ç¤ºå™¨
  * 
  * @author getan
  * 
@@ -9,7 +9,7 @@ public class LCD extends Monitor {
 
 	@Override
 	public String show() {
-		return "ÎÒÊÇĞ¡ÃçÌõ";
+		return "æˆ‘æ˜¯å°è‹—æ¡æ˜¾ç¤ºå™¨";
 	}
 
 }

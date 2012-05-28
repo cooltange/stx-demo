@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * ²ÉÓÃspringµÄ×°Åä·½Ê½
+ * é‡‡ç”¨springçš„è£…é…æ–¹å¼
  * 
  * @author getan
  * 
@@ -12,14 +12,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestSpring {
 
 	public static void main(String[] args) {
-		// Ê¹ÓÃspringÉÏÏÂÎÄ¶ÔÏó¼ÓÔØspringÅäÖÃÎÄ¼ş
+		// ä½¿ç”¨springä¸Šä¸‹æ–‡å¯¹è±¡åŠ è½½springé…ç½®æ–‡ä»¶
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"beans.xml");
-		
-		// ½ÓÊÕspringÒÑ´´½¨²¢×°ÅäºÃºóµÄComputer¶ÔÏó
+
+		// æ¥æ”¶springå·²åˆ›å»ºå¹¶è£…é…å¥½åçš„Computerå¯¹è±¡
 		Computer computer = (Computer) context.getBean("cpt");
 
-		// ÂŞÁĞ×°ÅäÇåµ¥
+		// ç½—åˆ—è£…é…æ¸…å•
 		System.out.println(computer);
 
 	}

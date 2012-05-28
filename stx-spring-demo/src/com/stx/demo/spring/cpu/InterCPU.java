@@ -1,7 +1,7 @@
 package com.stx.demo.spring.cpu;
 
 /**
- * Inter CPUÀà
+ * Inter CPUç±»
  * 
  * @author getan
  * 
@@ -10,7 +10,7 @@ public class InterCPU extends CPU {
 
 	@Override
 	public String show() {
-		return "¸ßĞÔÄÜµÄÓ¢ÌØ¶û";
+		return "é«˜æ€§èƒ½çš„è‹±ç‰¹å°”";
 	}
 
 }

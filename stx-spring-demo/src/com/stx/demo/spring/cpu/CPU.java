@@ -1,7 +1,7 @@
 package com.stx.demo.spring.cpu;
 
 /**
- * CPU ³éÏóÀà
+ * CPU æŠ½è±¡ç±»
  * 
  * @author getan
  * 

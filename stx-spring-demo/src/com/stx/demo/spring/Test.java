@@ -8,7 +8,7 @@ import com.stx.demo.spring.monitor.LCD;
 import com.stx.demo.spring.monitor.Monitor;
 
 /**
- * ÆÕÍ¨×°Åä·½Ê½
+ * æ™®é€šè£…é…æ–¹å¼
  * 
  * @author getan
  * 
@@ -16,18 +16,18 @@ import com.stx.demo.spring.monitor.Monitor;
 public class Test {
 
 	public static void main(String[] args) {
-		// Ñ¡¹ºÏÔÊ¾Æ÷
+		// é€‰è´­æ˜¾ç¤ºå™¨
 		Monitor monitor = new LCD();
 
-		// Ñ¡¹ºCPU
+		// é€‰è´­CPU
 		CPU cpu = new AmdCPU();
 
-		// ×°Åä
+		// è£…é…
 		Computer computer = new Computer();
 		computer.setCpu(cpu);
 		computer.setMonitor(monitor);
 
-		// ÂŞÁĞ×°ÅäÇåµ¥
+		// ç½—åˆ—è£…é…æ¸…å•
 		System.out.println(computer);
 
 	}

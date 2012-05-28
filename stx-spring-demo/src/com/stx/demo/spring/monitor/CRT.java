@@ -1,7 +1,7 @@
 package com.stx.demo.spring.monitor;
 
 /**
- * 旧式显示器类
+ * 鏃у紡鏄剧ず鍣ㄧ被
  * 
  * @author getan
  * 
@@ -9,7 +9,7 @@ package com.stx.demo.spring.monitor;
 public class CRT extends Monitor {
 	@Override
 	public String show() {
-		return "我叫大屁股显示器";
+		return "鎴戞槸澶у眮鑲℃樉绀哄櫒";
 	}
 
 }

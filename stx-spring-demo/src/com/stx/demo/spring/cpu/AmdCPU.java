@@ -1,7 +1,7 @@
 package com.stx.demo.spring.cpu;
 
 /**
- * AMD CPUÀà
+ * AMD CPUç±»
  * 
  * @author getan
  * 
@@ -10,7 +10,7 @@ public class AmdCPU extends CPU {
 
 	@Override
 	public String show() {
-		return "¸ßÐÔ¼Û±ÈµÄAMD";
+		return "é«˜æ€§ä»·æ¯”çš„AMD";
 	}
 
 }

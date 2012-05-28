@@ -4,7 +4,7 @@ import com.stx.demo.spring.cpu.CPU;
 import com.stx.demo.spring.monitor.Monitor;
 
 /**
- * µçÄÔÀà(¼ò»¯ÎªÓÉCPU¼°ÏÔÊ¾Æ÷×°Åä)
+ * ç”µè„‘ç±»(ç®€åŒ–ä¸ºç”±CPUåŠæ˜¾ç¤ºå™¨è£…é…)
  * 
  * @author getan
  * 
@@ -31,7 +31,7 @@ public class Computer {
 
 	@Override
 	public String toString() {
-		return "ÏÔÊ¾Æ÷:" + monitor.show() + ";" + "\n" + "CPU:" + cpu.show()
+		return "æ˜¾ç¤ºå™¨:" + monitor.show() + ";" + "\n" + "CPU:" + cpu.show()
 				+ "\n";
 	}
 }
