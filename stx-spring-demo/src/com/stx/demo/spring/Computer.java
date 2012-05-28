@@ -13,18 +13,11 @@ public class Computer {
 	private CPU cpu;
 	private Monitor monitor;
 
-	public CPU getCpu() {
-		return cpu;
-	}
-
+	// 依赖注入 只需要 被注入属性的 setter方法
 	public void setCpu(CPU cpu) {
 		this.cpu = cpu;
 	}
-
-	public Monitor getMonitor() {
-		return monitor;
-	}
-
+	// 依赖注入 只需要 被注入属性的 setter方法
 	public void setMonitor(Monitor monitor) {
 		this.monitor = monitor;
 	}

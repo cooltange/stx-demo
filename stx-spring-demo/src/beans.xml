@@ -7,16 +7,16 @@
 	<bean id="cpt" class="com.stx.demo.spring.Computer">
 		<!-- 装配电脑开始 -->
 		<!-- 类似 cpu = new InterCPU() -->
-		<property name="cpu" ref="cpu"></property>
+		<property name="cpu" ref="cpuBean"></property>
 		<!-- 类似 monitor = new LCD() -->
-		<property name="monitor" ref="monitor"></property>
+		<property name="monitor" ref="monitorBean"></property>
 		<!-- 装配电脑结束 -->
 	</bean>
 
 	<!-- 定义cpu -->
-	<bean id="cpu" class="com.stx.demo.spring.cpu.InterCPU"></bean>
+	<bean id="cpuBean" class="com.stx.demo.spring.cpu.InterCPU"></bean>
 
 	<!-- 定义显示器 -->
-	<bean id="monitor" class="com.stx.demo.spring.monitor.LCD"></bean>
+	<bean id="monitorBean" class="com.stx.demo.spring.monitor.LCD"></bean>
 
 </beans>
