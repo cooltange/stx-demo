@@ -14,9 +14,7 @@
 
 			<result name="list">/jsp/student/studentList.jsp</result>
 
-
 		</action>
-
 
 	</package>
 

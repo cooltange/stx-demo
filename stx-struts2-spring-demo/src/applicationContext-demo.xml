@@ -3,7 +3,6 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
-
 	<bean id="studentAction" class="com.stx.demo.action.StudentAction"
 		scope="prototype">
 		<property name="service" ref="studentService"></property>
@@ -16,6 +15,5 @@
 	<bean id="studentDao" class="com.stx.demo.dao.impl.StudentDaoImpl">
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
-
 
 </beans>
