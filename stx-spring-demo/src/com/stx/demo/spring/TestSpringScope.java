@@ -26,6 +26,7 @@ public class TestSpringScope {
 
 		// 通过==判断两个对象是否是一个对象
 		System.out.println("两台电脑配置一样,可是否是同一台电脑?");
+		// 分别 通过改变 id为cpt的bean的 scope属性为 singleton和 prototype,会看到不同的结果
 		System.out.println(computer1 == computer2);
 
 	}
