@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
@@ -17,8 +18,10 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 	public List<StudentEntity> list(StudentVo vo) {
 
 		String sql = "select * from student";
+		
+		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 
-		List stuList = getJdbcTemplate().query(sql, new RowMapper() {
+		List stuList = jdbcTemplate.query(sql, new RowMapper() {
 
 			@Override
 			public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
