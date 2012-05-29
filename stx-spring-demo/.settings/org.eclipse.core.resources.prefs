@@ -2,6 +2,7 @@ eclipse.preferences.version=1
 encoding//src/com/stx/demo/spring/Computer.java=UTF-8
 encoding//src/com/stx/demo/spring/Test.java=UTF-8
 encoding//src/com/stx/demo/spring/TestSpring.java=UTF-8
+encoding//src/com/stx/demo/spring/TestSpringScope.java=UTF-8
 encoding//src/com/stx/demo/spring/cpu/AmdCPU.java=UTF-8
 encoding//src/com/stx/demo/spring/cpu/CPU.java=UTF-8
 encoding//src/com/stx/demo/spring/cpu/InterCPU.java=UTF-8
