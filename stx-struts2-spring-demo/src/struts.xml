@@ -10,7 +10,7 @@
 
 	<package name="demo" extends="struts-default">
 
-		<action name="*Student" class="studentAction" method="{1}">
+		<action name="listStudent" class="studentAction" method="list">
 
 			<result name="list">/jsp/student/studentList.jsp</result>
 
