@@ -15,6 +15,12 @@
 			<result name="list">/jsp/student/studentList.jsp</result>
 
 		</action>
+		
+		<action name="delStudent" class="studentAction" method="del">
+
+			<result name="list" type="redirectAction">listStudent</result>
+
+		</action>
 
 	</package>
 

@@ -18,7 +18,7 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 	public List<StudentEntity> list(StudentVo vo) {
 
 		String sql = "select * from student";
-		
+
 		JdbcTemplate jdbcTemplate = getJdbcTemplate();
 
 		List stuList = jdbcTemplate.query(sql, new RowMapper() {
@@ -40,4 +40,16 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 		return stuList;
 	}
 
+	@Override
+	public void delStudent(String sno) {
+
+		JdbcTemplate jt = getJdbcTemplate();
+
+		String sql = "delete from student where sno = ?";
+
+		Object[] args = { sno };
+
+		jt.update(sql, args);
+
+	}
 }

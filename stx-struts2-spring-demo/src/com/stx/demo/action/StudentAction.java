@@ -11,15 +11,26 @@ public class StudentAction extends ActionSupport {
 
 	private StudentService service ;
 
+	// 学生信息列表
 	private List<StudentVo> stuList = new ArrayList<StudentVo>();
 
 	// 学生查询条件
 	private StudentVo criteria = null;
+	
+	// 学号
+	private String sno = null;
 
 	public String list() {
 
 		stuList = service.list(new StudentVo());
 
+		return "list";
+	}
+	
+	public String del(){
+		
+		service.delStudent(sno);
+		
 		return "list";
 	}
 
@@ -41,6 +52,14 @@ public class StudentAction extends ActionSupport {
 
 	public void setCriteria(StudentVo criteria) {
 		this.criteria = criteria;
+	}
+
+	public String getSno() {
+		return sno;
+	}
+
+	public void setSno(String sno) {
+		this.sno = sno;
 	}
 
 

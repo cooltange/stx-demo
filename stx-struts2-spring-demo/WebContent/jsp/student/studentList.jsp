@@ -49,8 +49,8 @@
 			>查看</a>
 			
 			&nbsp; 
-			<a	href="studentUpdate?id=${student.sno}">修改</a> &nbsp; <a
-				href="studentDel?id=${student.sno}">删除</a>
+			<a href="studentUpdate?id=${student.sno}">修改</a> &nbsp; 
+			<a href="delStudent?sno=${student.sno}" onclick="return confirm('确定删除该学生?')">删除</a>
 			</td>
 			</tr>
 			

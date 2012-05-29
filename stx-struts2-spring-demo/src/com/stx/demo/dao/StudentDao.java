@@ -8,5 +8,7 @@ import com.stx.demo.vo.StudentVo;
 public interface StudentDao {
 	
 	List<StudentEntity> list(StudentVo vo);
+	
+	void delStudent(String sno);
 
 }
