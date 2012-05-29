@@ -50,7 +50,13 @@
 			
 			&nbsp; 
 			<a href="studentUpdate?id=${student.sno}">修改</a> &nbsp; 
-			<a href="delStudent?sno=${student.sno}" onclick="return confirm('确定删除该学生?')">删除</a>
+			<a href="
+				<c:url value="delStudent">
+					<c:param name="sno" value="${student.sno}"/>
+				</c:url>"
+			 	onclick="return confirm('确定删除该学生?')"
+			>删除</a>
+			
 			</td>
 			</tr>
 			

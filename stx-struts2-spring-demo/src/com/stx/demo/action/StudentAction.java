@@ -17,6 +17,9 @@ public class StudentAction extends ActionSupport {
 	// 学生查询条件
 	private StudentVo criteria = null;
 	
+	// 学生信息
+	private StudentVo student = null;
+	
 	// 学号
 	private String sno = null;
 
