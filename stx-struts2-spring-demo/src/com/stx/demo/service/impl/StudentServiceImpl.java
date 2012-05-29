@@ -23,7 +23,8 @@ public class StudentServiceImpl implements StudentService {
 		for (StudentEntity entity : entityList) {
 
 			StudentVo vo = new StudentVo();
-
+			
+			// 对象属性值拷贝 entity => vo
 			BeanUtils.copyProperties(entity, vo);
 
 			voList.add(vo);

@@ -13,7 +13,8 @@ public class StudentAction extends ActionSupport {
 
 	private List<StudentVo> stuList = new ArrayList<StudentVo>();
 
-	private StudentVo vo = null;
+	// 学生查询条件
+	private StudentVo criteria = null;
 
 	public String list() {
 
@@ -34,12 +35,13 @@ public class StudentAction extends ActionSupport {
 		this.stuList = stuList;
 	}
 
-	public StudentVo getVo() {
-		return vo;
+	public StudentVo getCriteria() {
+		return criteria;
 	}
 
-	public void setVo(StudentVo vo) {
-		this.vo = vo;
+	public void setCriteria(StudentVo criteria) {
+		this.criteria = criteria;
 	}
+
 
 }
