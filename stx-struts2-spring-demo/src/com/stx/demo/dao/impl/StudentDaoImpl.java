@@ -19,25 +19,28 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 		String sql = "select * from student";
 
-		JdbcTemplate jdbcTemplate = getJdbcTemplate();
+		JdbcTemplate jt = getJdbcTemplate();
 
-		List stuList = jdbcTemplate.query(sql, new RowMapper() {
-
-			@Override
-			public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
-
-				StudentEntity entity = new StudentEntity();
-
-				entity.setSno(rs.getString("sno"));
-				entity.setSname(rs.getString("sname"));
-				entity.setSage(rs.getInt("sage"));
-				entity.setSsex(rs.getString("ssex"));
-
-				return entity;
-			}
-		});
+		List<StudentEntity> stuList = jt.query(sql, new StudentRowMapper());
 
 		return stuList;
+	}
+
+	class StudentRowMapper implements RowMapper {
+
+		@Override
+		public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+			StudentEntity entity = new StudentEntity();
+
+			entity.setSno(rs.getString("sno"));
+			entity.setSname(rs.getString("sname"));
+			entity.setSage(rs.getInt("sage"));
+			entity.setSsex(rs.getString("ssex"));
+
+			return entity;
+		}
+
 	}
 
 	@Override
@@ -47,6 +50,7 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 		String sql = "delete from student where sno = ?";
 
+		// 构建参数数组对象
 		Object[] args = { sno };
 
 		jt.update(sql, args);
