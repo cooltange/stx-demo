@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.stx.demo.entity.StudentEntity;
 import com.stx.demo.service.StudentService;
 import com.stx.demo.vo.StudentVo;
 
@@ -42,6 +43,13 @@ public class StudentAction extends ActionSupport {
 		service.addStudent(student);
 		
 		return "list";
+	}
+	
+	public String findStudentBySno(){
+		
+		student = service.findStudentBySno(sno);
+		
+		return "update";
 	}
 
 	public void setService(StudentService service) {

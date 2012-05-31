@@ -46,11 +46,23 @@ public class StudentServiceImpl implements StudentService {
 		dao.addStudent(student);
 		
 	}
+	
+	@Override
+	public StudentVo findStudentBySno(String sno) {
+		
+		StudentVo studentVo = new StudentVo();
+		
+		StudentEntity studentEntity = dao.findStudentBySno(sno);
+		
+		// 对象属性值拷贝 entity => vo
+		BeanUtils.copyProperties(studentEntity, studentVo);
+		
+		return studentVo;
+	}
 
 	public void setDao(StudentDao dao) {
 		this.dao = dao;
 	}
-
 
 
 }

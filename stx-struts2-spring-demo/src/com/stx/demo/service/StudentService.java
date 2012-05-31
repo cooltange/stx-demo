@@ -2,6 +2,7 @@ package com.stx.demo.service;
 
 import java.util.List;
 
+import com.stx.demo.entity.StudentEntity;
 import com.stx.demo.vo.StudentVo;
 
 public interface StudentService {
@@ -12,4 +13,5 @@ public interface StudentService {
 	
 	void addStudent(StudentVo student);
 	
+	StudentVo findStudentBySno(String sno);
 }

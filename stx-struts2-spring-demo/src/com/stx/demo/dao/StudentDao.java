@@ -12,5 +12,7 @@ public interface StudentDao {
 	void delStudent(String sno);
 	
 	void addStudent(StudentVo student);
+	
+	StudentEntity findStudentBySno(String sno);
 
 }

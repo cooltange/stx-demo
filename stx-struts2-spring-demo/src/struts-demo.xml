@@ -18,6 +18,14 @@
 			<result name="list" type="redirectAction">listStudent</result>
 		</action>
 		
+		<action name="findStudentBySno" class="studentAction" method="findStudentBySno">
+			<result name="update">/jsp/student/studentUpdate.jsp</result>
+		</action>
+		
+		<action name="UpdateStudent" class="studentAction" method="update">
+			<result name="list" type="redirectAction">listStudent</result>
+		</action>
+		
 		
 
 	</package>

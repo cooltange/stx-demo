@@ -66,8 +66,24 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 		// 构建参数数组
 		Object[] args = { student.getSno(), student.getSname(),
 				student.getSage(), student.getSsex() };
-		
+
 		jt.update(sql, args);
 
+	}
+
+	@Override
+	public StudentEntity findStudentBySno(String sno) {
+
+		JdbcTemplate jt = getJdbcTemplate();
+
+		String sql = "select * from student where sno = ?";
+
+		// 构建参数数组
+		Object[] args = { sno };
+
+		StudentEntity studentEntity = (StudentEntity) jt.queryForObject(sql,
+				args, new StudentRowMapper());
+
+		return studentEntity;
 	}
 }

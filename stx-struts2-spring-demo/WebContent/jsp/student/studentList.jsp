@@ -49,7 +49,11 @@
 			>查看</a>
 			
 			&nbsp; 
-			<a href="studentUpdate?id=${student.sno}">修改</a> &nbsp; 
+			<a href="
+				<c:url value="findStudentBySno">
+					<c:param name="sno" value="${student.sno}"/>
+				</c:url>"
+			>修改</a> &nbsp; 
 			<a href="
 				<c:url value="delStudent">
 					<c:param name="sno" value="${student.sno}"/>
