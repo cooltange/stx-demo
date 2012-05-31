@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>学生信息列表(JSTL标签版)</title>
+<title>学生信息列表</title>
 <!-- ${pageContext.request.contextPath}可以获得该项目的部署后的Web应用名,常用于获取项目资源(css,js,图片等)的绝对路径 -->
 <!-- ${pageContext.request.contextPath}/css/yui.css 即路径 /stx-ee-demo/css/yui.css -->
 <link href="${pageContext.request.contextPath}/css/yui.css" type="text/css"
@@ -14,7 +14,7 @@
 	rel="stylesheet" />
 </head>
 <body>
-	<h3>学生信息列表(JSTL标签版)</h3>
+	<h3>学生信息列表</h3>
 	<table>
 		<tr>
 			<th>编号</th>
@@ -30,7 +30,7 @@
 			<!-- 判断status.count是否为奇数,如果为奇数设置该行背景颜色为蓝色 -->
 			<tr 
 				<c:if test="${status.count % 2 == 1}">
-					bgcolor="skyblue"
+					class = "odd"
 				</c:if>
 			>
 				<td>${status.count}</td>

@@ -57,6 +57,15 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
 /* body */
 #filter,#content {margin-top:1em;}
 
+.odd {
+	margin:0 0 0 0;
+	padding: 0.5em;
+	background: skyblue;
+}
+#index div{
+	margin: 10px;
+}
+
 /* footer */
 #ft {
 	margin-top: 15px;

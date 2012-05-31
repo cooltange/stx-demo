@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
@@ -27,7 +28,6 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 	}
 
 	class StudentRowMapper implements RowMapper {
-
 		@Override
 		public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
 
@@ -40,7 +40,6 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 			return entity;
 		}
-
 	}
 
 	@Override
@@ -50,7 +49,7 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 		String sql = "delete from student where sno = ?";
 
-		// 构建参数数组对象
+		// 鏋勫缓鍙傛暟鏁扮粍
 		Object[] args = { sno };
 
 		jt.update(sql, args);
