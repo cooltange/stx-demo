@@ -12,7 +12,7 @@ public class StudentVo {
 	// 姓名
 	private String sname;
 	// 年龄
-	private int sage;
+	private Integer sage;
 	// 性别
 	private String ssex;
 

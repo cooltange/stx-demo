@@ -10,5 +10,7 @@ public interface StudentDao {
 	List<StudentEntity> list(StudentVo vo);
 	
 	void delStudent(String sno);
+	
+	void addStudent(StudentVo student);
 
 }

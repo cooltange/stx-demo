@@ -10,4 +10,6 @@ public interface StudentService {
 	
 	void delStudent(String sno);
 	
+	void addStudent(StudentVo student);
+	
 }

@@ -55,4 +55,19 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 		jt.update(sql, args);
 
 	}
+
+	@Override
+	public void addStudent(StudentVo student) {
+
+		JdbcTemplate jt = getJdbcTemplate();
+
+		String sql = "insert into student(sno,sname,sage,ssex) values(?,?,?,?)";
+
+		// 构建参数数组
+		Object[] args = { student.getSno(), student.getSname(),
+				student.getSage(), student.getSsex() };
+		
+		jt.update(sql, args);
+
+	}
 }

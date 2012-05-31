@@ -13,6 +13,12 @@
 		<action name="delStudent" class="studentAction" method="del">
 			<result name="list" type="redirectAction">listStudent</result>
 		</action>
+		
+		<action name="addStudent" class="studentAction" method="add">
+			<result name="list" type="redirectAction">listStudent</result>
+		</action>
+		
+		
 
 	</package>
 

@@ -36,6 +36,13 @@ public class StudentAction extends ActionSupport {
 		
 		return "list";
 	}
+	
+	public String add(){
+		
+		service.addStudent(student);
+		
+		return "list";
+	}
 
 	public void setService(StudentService service) {
 		this.service = service;
@@ -63,6 +70,14 @@ public class StudentAction extends ActionSupport {
 
 	public void setSno(String sno) {
 		this.sno = sno;
+	}
+
+	public StudentVo getStudent() {
+		return student;
+	}
+
+	public void setStudent(StudentVo student) {
+		this.student = student;
 	}
 
 

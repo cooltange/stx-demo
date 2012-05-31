@@ -40,9 +40,17 @@ public class StudentServiceImpl implements StudentService {
 		dao.delStudent(sno);
 
 	}
+	@Override
+	public void addStudent(StudentVo student) {
+		
+		dao.addStudent(student);
+		
+	}
 
 	public void setDao(StudentDao dao) {
 		this.dao = dao;
 	}
+
+
 
 }

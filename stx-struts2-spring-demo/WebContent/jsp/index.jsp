@@ -14,7 +14,7 @@
 	<div id='index'>
 		<h1>stx-struts2-spring演示</h1>
 		<div><a href="${pageContext.request.contextPath}/listStudent.action">学生信息列表</a></div>
-		<div><a href="${pageContext.request.contextPath}/addStudent.action">新增学生信息</a></div>
+		<div><a href="${pageContext.request.contextPath}/jsp/student/studentAdd.jsp">新增学生信息</a></div>
 	</div>
 </body>
 </html>

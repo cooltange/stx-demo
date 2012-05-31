@@ -15,31 +15,31 @@
 </head>
 <body>
 	<h3>新增学生信息</h3>
-	<form action="">
+	<form action="addStudent" method="post">
 		<table>
 			<tr>
 				<td>学号</td>
 				<td>
-					<input type="text" name="sno">
+					<input type="text" name="student.sno">
 				</td>
 			</tr>
 			<tr>
 				<td>姓名</td>
 				<td>
-					<input type="text" name="sname">
+					<input type="text" name="student.sname">
 				</td>
 			</tr>
 			<tr>
 				<td>年龄</td>
 				<td>
-					<input type="text" name="sage">
+					<input type="text" name="student.sage">
 				</td>
 			</tr>
 			<tr>
 				<td>性别</td>
 				<td>
-					<input type="radio" name="sgender" value="m" checked="checked">男
-					<input type="radio" name="sgender" value="f">女
+					<input type="radio" name="student.ssex" value="男" checked="checked">男
+					<input type="radio" name="student.ssex" value="女">女
 				</td>
 			</tr>
 	
