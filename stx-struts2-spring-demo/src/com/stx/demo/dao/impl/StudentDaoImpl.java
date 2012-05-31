@@ -86,4 +86,19 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 		return studentEntity;
 	}
+
+	@Override
+	public void updateStudent(StudentVo student) {
+
+		JdbcTemplate jt = getJdbcTemplate();
+
+		String sql = "update student set sno = ?, sname= ?, sage = ?, ssex = ? where sno = ?";
+
+		// 构建参数数组
+		Object[] args = { student.getSno(), student.getSname(),
+				student.getSage(), student.getSsex() ,student.getSno()};
+
+		jt.update(sql, args);
+
+	}
 }

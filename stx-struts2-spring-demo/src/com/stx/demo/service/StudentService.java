@@ -14,4 +14,7 @@ public interface StudentService {
 	void addStudent(StudentVo student);
 	
 	StudentVo findStudentBySno(String sno);
+	
+	void updateStudent(StudentVo student);
+	
 }

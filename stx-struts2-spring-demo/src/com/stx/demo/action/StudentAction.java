@@ -51,6 +51,13 @@ public class StudentAction extends ActionSupport {
 		
 		return "update";
 	}
+	
+	public String update(){
+		
+		service.updateStudent(student);
+		
+		return "list";
+	}
 
 	public void setService(StudentService service) {
 		this.service = service;

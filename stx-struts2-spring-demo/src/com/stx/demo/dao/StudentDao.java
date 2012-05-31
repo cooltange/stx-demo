@@ -14,5 +14,7 @@ public interface StudentDao {
 	void addStudent(StudentVo student);
 	
 	StudentEntity findStudentBySno(String sno);
+	
+	void updateStudent(StudentVo student);
 
 }

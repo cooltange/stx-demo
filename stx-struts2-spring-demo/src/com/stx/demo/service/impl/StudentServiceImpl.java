@@ -60,9 +60,17 @@ public class StudentServiceImpl implements StudentService {
 		return studentVo;
 	}
 
+	@Override
+	public void updateStudent(StudentVo student) {
+
+		dao.updateStudent(student);
+		
+	}
+	
 	public void setDao(StudentDao dao) {
 		this.dao = dao;
 	}
+
 
 
 }
