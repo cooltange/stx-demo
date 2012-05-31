@@ -38,8 +38,14 @@
 			<tr>
 				<td>性别</td>
 				<td>
-					<input type="radio" name="student.ssex" value="男" checked="checked">男
-					<input type="radio" name="student.ssex" value="女">女
+					<c:if test="${requestScope.student.ssex=='男'}">
+						<input type="radio" name="student.ssex" value="男" checked="checked">男
+						<input type="radio" name="student.ssex" value="女">女
+					</c:if>
+					<c:if test="${requestScope.student.ssex=='女'}">
+					<input type="radio" name="student.ssex" value="男">男
+					<input type="radio" name="student.ssex" value="女" checked="checked">女
+					</c:if>
 				</td>
 			</tr>
 	
