@@ -92,11 +92,11 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 		JdbcTemplate jt = getJdbcTemplate();
 
-		String sql = "update student set sno = ?, sname= ?, sage = ?, ssex = ? where sno = ?";
+		String sql = "update student set sname= ?, sage = ?, ssex = ? where sno = ?";
 
 		// 构建参数数组
-		Object[] args = { student.getSno(), student.getSname(),
-				student.getSage(), student.getSsex() ,student.getSno()};
+		Object[] args = { student.getSname(), student.getSage(),
+				student.getSsex(), student.getSno() };
 
 		jt.update(sql, args);
 

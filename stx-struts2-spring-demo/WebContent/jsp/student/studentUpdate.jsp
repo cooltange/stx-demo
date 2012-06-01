@@ -21,6 +21,7 @@
 				<td>学号</td>
 				<td>
 					${requestScope.student.sno}
+					<input type="hidden" name="student.sno" value="${requestScope.student.sno}">
 				</td>
 			</tr>
 			<tr>
