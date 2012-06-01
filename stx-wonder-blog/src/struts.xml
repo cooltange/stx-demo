@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 开发模式 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 主题(简单) -->
+	<constant name="struts.ui.theme" value="simple" />
+
+	<package name="demo" extends="struts-default">
+
+		<action name="listStudent" class="studentAction" method="list">
+
+			<result name="list">/jsp/student/studentList.jsp</result>
+
+		</action>
+
+	</package>
+
+</struts>
