@@ -66,6 +66,10 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
 	margin: 10px;
 }
 
+#update table tr td{
+	text-align: left;
+}
+
 /* footer */
 #ft {
 	margin-top: 15px;
@@ -76,3 +80,4 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus
 }
 
 #ft a {color: #999;}
+

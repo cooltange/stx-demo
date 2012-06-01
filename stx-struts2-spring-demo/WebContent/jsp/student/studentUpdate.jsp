@@ -15,12 +15,12 @@
 </head>
 <body>
 	<h3>更新学生信息</h3>
-	<form action="UpdateStudent" method="post">
+	<form id="update" action="UpdateStudent" method="post">
 		<table>
 			<tr>
 				<td>学号</td>
 				<td>
-					<input type="text" name="student.sno" value="${requestScope.student.sno}">
+					${requestScope.student.sno}
 				</td>
 			</tr>
 			<tr>
