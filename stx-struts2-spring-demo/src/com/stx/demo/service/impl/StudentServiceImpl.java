@@ -48,7 +48,7 @@ public class StudentServiceImpl implements StudentService {
 	}
 	
 	@Override
-	public StudentVo findStudentBySno(String sno) {
+	public StudentVo findStudentForUpdate(String sno) {
 		
 		StudentVo studentVo = new StudentVo();
 		

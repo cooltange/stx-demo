@@ -47,7 +47,7 @@ public class StudentAction extends ActionSupport {
 	
 	public String findStudentBySno(){
 		
-		student = service.findStudentBySno(sno);
+		student = service.findStudentForUpdate(sno);
 		
 		return "update";
 	}

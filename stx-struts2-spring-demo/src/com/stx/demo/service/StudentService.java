@@ -13,7 +13,7 @@ public interface StudentService {
 	
 	void addStudent(StudentVo student);
 	
-	StudentVo findStudentBySno(String sno);
+	StudentVo findStudentForUpdate(String sno);
 	
 	void updateStudent(StudentVo student);
 	
