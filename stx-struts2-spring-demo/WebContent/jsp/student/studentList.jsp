@@ -67,8 +67,8 @@
 		</c:forEach>
 
 	</table>
-	<!-- 使用js的history(历史对象)的back方法或者go(-1)完成返回功能 -->
-	<input type="button" onclick="history.back();" value="返回">
+	<!-- 返回演示首页 -->
+	<input type="button" onclick="location='${pageContext.request.contextPath}'" value="返回">
 
 </body>
 </html>
