@@ -50,7 +50,7 @@
 	<!-- 那些类的哪些方法参与事务 -->
 	<aop:config>
 		<aop:pointcut id="allServiceMethod"
-			expression="execution(* com.stx.wonder.service..*.*(..))" />
+			expression="execution(* com.stx.demo.service..*.*(..))" />
 		<aop:advisor pointcut-ref="allServiceMethod" advice-ref="txAdvice" />
 	</aop:config>
 
