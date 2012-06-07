@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h3>更新学生信息</h3>
-	<form id="update" action="UpdateStudent" method="post">
+	<form id="update" action="UpdateStudent.action" method="post">
 		<table>
 			<tr>
 				<td>学号</td>

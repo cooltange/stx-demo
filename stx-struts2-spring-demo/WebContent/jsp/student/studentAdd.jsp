@@ -15,7 +15,7 @@
 </head>
 <body>
 	<h3>新增学生信息</h3>
-	<form action="addStudent" method="post">
+	<form action="addStudent.action" method="post">
 		<table>
 			<tr>
 				<td>学号</td>
