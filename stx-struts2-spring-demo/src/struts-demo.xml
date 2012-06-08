@@ -16,10 +16,10 @@
 				<interceptor-ref name="paramsPrepareParamsStack" />
 			</interceptor-stack>
 		</interceptors>
-		<!-- 此部分暂时不需要理解 END -->
 		
 		<!-- 定义默认拦截器栈 -->
 		<default-interceptor-ref name="demoStack" />
+		<!-- 此部分暂时不需要理解 END -->
 
 		<!-- action定义部分 START -->
 		<!-- 显示学生列表 -->
