@@ -36,7 +36,7 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 	 * ResultSet记录 =>Entity对象
 	 * 
 	 * 该类是内部类,类中实现了mapRow方法,其中就是实现 如何具体<BR>
-	 * 将每一个学生表的记录转换为 学生entity对象
+	 * 将每一条学生表的记录转换为 学生entity对象
 	 * 
 	 * @author getan
 	 * 
@@ -47,16 +47,16 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 			// 创建学生实体对象用于保存一个学生的信息
 			StudentEntity entity = new StudentEntity();
 
-			// 学号
+			// 学生实体对象.学号 <= 学生记录.学号
 			entity.setSno(rs.getString("sno"));
-			// 姓名
+			// 学生实体对象.姓名 <= 学生记录.姓名
 			entity.setSname(rs.getString("sname"));
-			// 年龄
+			// 学生实体对象.年龄 <= 学生记录.年龄
 			entity.setSage(rs.getInt("sage"));
-			// 性别
+			// 学生实体对象.性别 <= 学生记录.性别
 			entity.setSsex(rs.getString("ssex"));
 
-			// 返回该已经完成 "ResultSet记录 =>Entity对象 "操作后 的 学生实体对象
+			// 返回已经完成 "Entity对象 <= ResultSet记录"操作后 的 学生Entity对象
 			return entity;
 		}
 	}
