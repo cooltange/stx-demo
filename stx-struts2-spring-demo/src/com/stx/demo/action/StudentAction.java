@@ -78,7 +78,7 @@ public class StudentAction extends ActionSupport {
 	 * @return
 	 */
 	public String update() {
-
+		//更新学生信息
 		service.updateStudent(student);
 
 		return "list";
