@@ -4,7 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
@@ -15,8 +14,14 @@ import com.stx.demo.vo.StudentVo;
 
 public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
-	@Override
-	public List<StudentEntity> list(StudentVo vo) {
+	/**
+	 * 获得学生信息列表
+	 * 
+	 * @param criteria
+	 *            查询条件
+	 * @return 学生信息列表
+	 */
+	public List<StudentEntity> list(StudentVo criteria) {
 
 		String sql = "select * from student";
 
@@ -27,21 +32,40 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 		return stuList;
 	}
 
+	/**
+	 * ResultSet记录 =>Entity对象
+	 * 
+	 * 该类是内部类,类中实现了mapRow方法,其中就是实现 如何具体<BR>
+	 * 将每一个学生表的记录转换为 学生entity对象
+	 * 
+	 * @author getan
+	 * 
+	 */
 	class StudentRowMapper implements RowMapper {
 		@Override
 		public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
-
+			// 创建学生实体对象用于保存一个学生的信息
 			StudentEntity entity = new StudentEntity();
 
+			// 学号
 			entity.setSno(rs.getString("sno"));
+			// 姓名
 			entity.setSname(rs.getString("sname"));
+			// 年龄
 			entity.setSage(rs.getInt("sage"));
+			// 性别
 			entity.setSsex(rs.getString("ssex"));
 
+			// 返回该已经完成 "ResultSet记录 =>Entity对象 "操作后 的 学生实体对象
 			return entity;
 		}
 	}
 
+	/**
+	 * 根据学号删除学生信息
+	 * 
+	 * @param sno
+	 */
 	@Override
 	public void delStudent(String sno) {
 
@@ -56,6 +80,11 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 	}
 
+	/**
+	 * 新增学生信息
+	 * 
+	 * @param student
+	 */
 	@Override
 	public void addStudent(StudentVo student) {
 
@@ -71,6 +100,12 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 
 	}
 
+	/**
+	 * 根据学号查询学生信息
+	 * 
+	 * @param sno
+	 * @return 单个学生信息
+	 */
 	@Override
 	public StudentEntity findStudentBySno(String sno) {
 
@@ -87,6 +122,11 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 		return studentEntity;
 	}
 
+	/**
+	 * 更新学生信息
+	 * 
+	 * @param student
+	 */
 	@Override
 	public void updateStudent(StudentVo student) {
 

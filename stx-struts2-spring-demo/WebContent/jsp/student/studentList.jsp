@@ -41,14 +41,13 @@
 				
 				<td>&nbsp; 
 			<%-- <a href="studentDisp?id=${student.sno}&name=${student.sname}">查看</a> --%>
-			<!-- 使用url标签构建由servlet路径与参数列表的拼接后的url路径(更便于维护) -->
-			<a href="
+			<!-- <a href="
 				<c:url value="studentDisp">
 					<c:param name="id" value="${student.sno}"/>
 				</c:url>"
 			>查看</a>
-			
-			&nbsp; 
+			&nbsp; -->
+			<!-- 使用url标签构建由servlet路径与参数列表的拼接后的url路径(更便于维护) -->
 			<a href="
 				<c:url value="findStudentBySno">
 					<c:param name="sno" value="${student.sno}"/>

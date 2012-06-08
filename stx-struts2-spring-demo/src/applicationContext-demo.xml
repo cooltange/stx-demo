@@ -3,16 +3,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
+	<!-- 学生action -->
 	<bean id="studentAction" class="com.stx.demo.action.StudentAction"
 		scope="prototype">
-		<property name="service" ref="studentService"></property>
+		<!-- 依赖注入studentServiceImpl -->
+		<property name="service" ref="studentServiceImpl"></property>
 	</bean>
 
-	<bean id="studentService" class="com.stx.demo.service.impl.StudentServiceImpl">
-		<property name="dao" ref="studentDao"></property>
+	<!-- 学生service -->
+	<bean id="studentServiceImpl" class="com.stx.demo.service.impl.StudentServiceImpl">
+		<!-- 依赖注入studentDaoImpl -->
+		<property name="dao" ref="studentDaoImpl"></property>
 	</bean>
 
-	<bean id="studentDao" class="com.stx.demo.dao.impl.StudentDaoImpl">
+	<!-- 学生dao -->
+	<bean id="studentDaoImpl" class="com.stx.demo.dao.impl.StudentDaoImpl">
+		<!-- 依赖注入jdbcTemplate -->
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 

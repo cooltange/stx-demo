@@ -4,60 +4,87 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.stx.demo.entity.StudentEntity;
 import com.stx.demo.service.StudentService;
 import com.stx.demo.vo.StudentVo;
 
 public class StudentAction extends ActionSupport {
 
-	private StudentService service ;
+	private StudentService service;
 
 	// 学生信息列表
 	private List<StudentVo> stuList = new ArrayList<StudentVo>();
 
 	// 学生查询条件
 	private StudentVo criteria = null;
-	
+
 	// 学生信息
 	private StudentVo student = null;
-	
+
 	// 学号
 	private String sno = null;
 
+	/**
+	 * 学生信息列表
+	 * 
+	 * @return
+	 */
 	public String list() {
 
+		// 根据查询条件获得学生信息列表(参数因暂缺查询条件,所以直接new的一个学生vo对象)
 		stuList = service.list(new StudentVo());
 
 		return "list";
 	}
-	
-	public String del(){
-		
+
+	/**
+	 * 删除学生信息
+	 * 
+	 * @return
+	 */
+	public String del() {
+		// 根据学号删除学生信息
 		service.delStudent(sno);
-		
+
 		return "list";
 	}
-	
-	public String add(){
-		
+
+	/**
+	 * 新增学生信息
+	 * 
+	 * @return
+	 */
+	public String add() {
+		// 添加学生信息
 		service.addStudent(student);
-		
+
 		return "list";
 	}
-	
-	public String findStudentBySno(){
-		
+
+	/**
+	 * 根据学号查询学生信息
+	 * 
+	 * @return
+	 */
+	public String findStudentBySno() {
+		// 根据学号查询学生信息
 		student = service.findStudentForUpdate(sno);
-		
+
 		return "update";
 	}
 	
-	public String update(){
-		
+	/**
+	 * 更新学生信息
+	 * 
+	 * @return
+	 */
+	public String update() {
+
 		service.updateStudent(student);
-		
+
 		return "list";
 	}
+	
+	// 以下是 get/set 方法区
 
 	public void setService(StudentService service) {
 		this.service = service;
@@ -94,6 +121,5 @@ public class StudentAction extends ActionSupport {
 	public void setStudent(StudentVo student) {
 		this.student = student;
 	}
-
 
 }
