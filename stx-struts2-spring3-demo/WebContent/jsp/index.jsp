@@ -14,9 +14,18 @@
 <body>
 	<div id='index'>
 		<h1>stx-struts2-spring3-演示</h1>
-		<h2>(使用轻量级h2内存数据库实现,未使用oracle数据库)</h2>
-		<div><a href="${pageContext.request.contextPath}/listStudent.action">学生信息列表</a></div>
-		<div><a href="${pageContext.request.contextPath}/jsp/student/studentAdd.jsp">新增学生信息</a></div>
+		<h2>
+			(使用轻量级h2内存数据库实现,未使用oracle数据库&nbsp;
+			<a href="${pageContext.request.contextPath}/console/login.jsp" target="_blank">h2数据库控制台</a>
+			)
+		</h2>
+		<div>
+			<a href="${pageContext.request.contextPath}/listStudent.action">学生信息列表</a>
+		</div>
+		<div>
+			<a
+				href="${pageContext.request.contextPath}/jsp/student/studentAdd.jsp">新增学生信息</a>
+		</div>
 	</div>
 </body>
 </html>
