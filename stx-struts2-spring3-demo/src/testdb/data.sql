@@ -1,23 +1,23 @@
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s013', 'ÍõÂé×Ó', 20, 'ÄĞ');
+values ('s013', 'ç‹éº»å­', 20, 'ç”·');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s011', 'ÍõĞ¡Îå', 22, 'Å®');
+values ('s011', 'ç‹å°äº”', 22, 'å¥³');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s012', 'ÍõÎå', 28, 'ÄĞ');
+values ('s012', 'ç‹äº”', 28, 'ç”·');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s002', 'ÀîËÄ', 23, 'ÄĞ');
+values ('s002', 'æå››', 23, 'ç”·');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s003', 'ÎâÅô', 25, 'ÄĞ');
+values ('s003', 'å´é¹', 25, 'ç”·');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s004', 'ÇÙÇß', 20, 'Å®');
+values ('s004', 'ç´æ²', 20, 'å¥³');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s005', 'ÍõÀö', 20, 'Å®');
+values ('s005', 'ç‹ä¸½', 20, 'å¥³');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s006', 'Àî²¨', 21, 'ÄĞ');
+values ('s006', 'ææ³¢', 21, 'ç”·');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s007', 'ÁõÓñ', 21, 'ÄĞ');
+values ('s007', 'åˆ˜ç‰', 21, 'ç”·');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s008', 'ÏôÈØ', 21, 'Å®');
+values ('s008', 'è§è“‰', 21, 'å¥³');
 insert into STUDENT (sno, sname, sage, ssex)
-values ('s010', '³ÂÃÀ', 22, 'Å®');
+values ('s010', 'é™ˆç¾', 22, 'å¥³');
 commit;
