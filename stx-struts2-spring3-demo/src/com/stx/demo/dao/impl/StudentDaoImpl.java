@@ -21,7 +21,7 @@ public class StudentDaoImpl extends JdbcDaoSupport implements StudentDao {
 	 *            查询条件
 	 * @return 学生信息列表
 	 */
-	public List<StudentEntity> list(StudentVo criteria) {
+	public List<StudentEntity> findStudent(StudentVo criteria) {
 
 		String sql = "select * from student order by sno";
 
