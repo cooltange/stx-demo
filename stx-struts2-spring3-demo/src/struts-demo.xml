@@ -34,6 +34,8 @@
 
 		<!-- 新增学生 -->
 		<action name="addStudent" class="studentAction" method="add">
+			<!-- <result name="input">/jsp/student/studentAdd.jsp</result> -->
+			<result name="input" >/jsp/student/studentAdd.jsp</result>
 			<result name="list" type="redirectAction">listStudent</result>
 		</action>
 

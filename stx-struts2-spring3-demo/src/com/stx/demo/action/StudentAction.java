@@ -54,9 +54,17 @@ public class StudentAction extends ActionSupport {
 	 * @return
 	 */
 	public String add() {
-		// 添加学生信息
-		service.addStudent(student);
-
+		try {
+			// 添加学生信息
+			service.addStudent(student);
+		} catch (Exception e) {
+			// 向页面添加错误信息
+			addActionError("学生["+ student.getSname() +"]添加失败!");
+			return INPUT;
+		}
+		
+		// 向页面添加消息信息
+		addActionMessage("学生["+ student.getSname() +"]添加成功!");
 		return "list";
 	}
 
