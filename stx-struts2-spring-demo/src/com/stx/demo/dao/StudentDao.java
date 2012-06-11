@@ -13,7 +13,7 @@ public interface StudentDao {
 	 *            查询条件
 	 * @return 学生信息列表
 	 */
-	List<StudentEntity> list(StudentVo vo);
+	List<StudentEntity> findStudent(StudentVo vo);
 
 	/**
 	 * 根据学号删除学生信息

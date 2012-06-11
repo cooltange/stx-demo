@@ -26,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
 
 		List<StudentVo> voList = new ArrayList<StudentVo>();
 
-		List<StudentEntity> entityList = dao.list(criteria);
+		List<StudentEntity> entityList = dao.findStudent(criteria);
 
 		for (StudentEntity entity : entityList) {
 
