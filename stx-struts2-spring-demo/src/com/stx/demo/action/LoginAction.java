@@ -5,7 +5,7 @@ import com.stx.demo.service.LoginService;
 import com.stx.demo.vo.StudentVo;
 
 public class LoginAction extends ActionSupport {
-
+	
 	private String username;
 
 	private String password;
@@ -18,12 +18,14 @@ public class LoginAction extends ActionSupport {
 	 * @return
 	 */
 	public String login() {
-
+		// 通过学号及密码 获取 学生视图对象
 		StudentVo vo = service.validateAuth(username, password);
-
+		// 通过返回的 学生视图对象 ,判断用户名及密码是否正确
 		if (vo != null) {
+			// 用户名及密码合法
 			return "success";
 		} else {
+			// 用户名及密码非法
 			addActionError("用户名或密码错误!");
 			return INPUT;
 		}

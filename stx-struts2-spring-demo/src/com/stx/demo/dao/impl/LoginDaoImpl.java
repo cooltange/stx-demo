@@ -13,6 +13,13 @@ import com.stx.demo.entity.StudentEntity;
 
 public class LoginDaoImpl extends JdbcDaoSupport implements LoginDao {
 
+	/**
+	 * 通过用户名及密码返回学生实体对象
+	 * 
+	 * @param username
+	 * @param password
+	 * @return StudentEntity
+	 */
 	@Override
 	public StudentEntity findStudentBySnoAndSpassword(String username,
 			String password) {
@@ -27,11 +34,12 @@ public class LoginDaoImpl extends JdbcDaoSupport implements LoginDao {
 
 		StudentEntity entity = null;
 
-		if (!stuList.isEmpty()) {
+		if (stuList.isEmpty()) {
+			return null;
+		} else {
 			entity = (StudentEntity) stuList.get(0);
+			return entity;
 		}
-
-		return entity;
 
 	}
 
