@@ -15,6 +15,8 @@ public class StudentEntity {
 	private int sage;
 	// 性别
 	private String ssex;
+	// 密码
+	private String spassword;
 
 	public String getSno() {
 		return sno;
@@ -46,6 +48,14 @@ public class StudentEntity {
 
 	public void setSsex(String ssex) {
 		this.ssex = ssex;
+	}
+
+	public String getSpassword() {
+		return spassword;
+	}
+
+	public void setSpassword(String spassword) {
+		this.spassword = spassword;
 	}
 
 }

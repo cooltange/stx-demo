@@ -6,8 +6,7 @@
 	<!-- demo模块 -->
 	<package name="demo" extends="struts-default">
 		<!-- 此部分暂时不需要理解 START -->
-		<!-- 基于paramsPrepareParamsStack,
-			   增加store interceptor保证actionMessage在redirect后不会丢失 -->
+		<!-- 基于paramsPrepareParamsStack, 增加store interceptor保证actionMessage在redirect后不会丢失 -->
 		<interceptors>
 			<interceptor-stack name="demoStack">
 				<interceptor-ref name="store">
@@ -16,7 +15,7 @@
 				<interceptor-ref name="paramsPrepareParamsStack" />
 			</interceptor-stack>
 		</interceptors>
-		
+
 		<!-- 定义默认拦截器栈 -->
 		<default-interceptor-ref name="demoStack" />
 		<!-- 此部分暂时不需要理解 END -->
@@ -47,8 +46,14 @@
 			<result name="list" type="redirectAction">listStudent</result>
 		</action>
 
+		<!-- 用户登录 -->
+		<action name="login" class="loginAction" method="login">
+			<result>/jsp/index.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+
 		<!-- action定义部分 END -->
-		
+
 	</package>
 
 </struts>

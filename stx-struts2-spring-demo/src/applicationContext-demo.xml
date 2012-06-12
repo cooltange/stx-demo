@@ -22,4 +22,21 @@
 		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
 	</bean>
 
+	<!-- 登录action -->
+	<bean id="loginAction" class="com.stx.demo.action.LoginAction"
+		scope="prototype">
+		<!-- 依赖注入loginServiceImpl -->
+		<property name="service" ref="loginServiceImpl"></property>
+	</bean>
+	<!-- 登录service -->
+	<bean id="loginServiceImpl" class="com.stx.demo.service.impl.LoginServiceImpl">
+		<!-- 依赖注入loginDaoImpl -->
+		<property name="dao" ref="loginDaoImpl"></property>
+	</bean>
+	<!-- 登录dao -->
+	<bean id="loginDaoImpl" class="com.stx.demo.dao.impl.LoginDaoImpl">
+		<!-- 依赖注入jdbcTemplate -->
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
 </beans>
