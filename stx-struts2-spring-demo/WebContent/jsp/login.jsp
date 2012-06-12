@@ -21,12 +21,12 @@
 			<table>
 				<tr>
 					<td>学号:</td>
-					<td><s:textfield name="username" />
+					<td><s:textfield name="username" value="s002"/>
 					</td>
 				</tr>
 				<tr>
 					<td>密码:</td>
-					<td><s:password name="password" /></td>
+					<td><s:password name="password" value="12345678"/></td>
 				</tr>
 				<tr>
 					<td colspan="2"><s:submit value="登录" />
