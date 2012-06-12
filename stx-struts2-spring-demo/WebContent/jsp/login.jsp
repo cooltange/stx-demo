@@ -15,6 +15,7 @@
 <body>
 	<div id='index'>
 		<h1>login演示</h1>
+		<h3>(默认密码:123456)</h3>
 		<s:actionerror cssClass="error" />
 
 		<s:form action="login.action" method="post">
@@ -26,10 +27,11 @@
 				</tr>
 				<tr>
 					<td>密码:</td>
-					<td><s:password name="password" value="12345678"/></td>
+					<td><s:password name="password" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><s:submit value="登录" />
+					<td colspan="2">
+						<s:submit value="登录" />
 					</td>
 				</tr>
 			</table>
