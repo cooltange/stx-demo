@@ -20,7 +20,7 @@
 		<s:form action="login.action" method="post">
 			<table>
 				<tr>
-					<td>用户名:</td>
+					<td>学号:</td>
 					<td><s:textfield name="username" />
 					</td>
 				</tr>
