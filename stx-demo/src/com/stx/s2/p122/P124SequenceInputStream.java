@@ -38,6 +38,8 @@ public class P124SequenceInputStream {
 		} finally {
 			// 保证最后可以关闭字节文件输入流
 			in.close();
+			in1.close();
+			in2.close();
 		}
 
 	}
