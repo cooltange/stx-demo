@@ -2,7 +2,23 @@ package com.stx.s2.p197;
 
 /**
  * 多线程编程<BR>
- * 使用实现线程接口Runnable方式实现
+ * 使用实现Runnable接口方式实现
+ * 
+ * @author getan
+ * 
+ */
+class SayHelloRunnable implements Runnable {
+	@Override
+	public void run() {// 重写父类方法
+		// 循环输出1-1000的整数
+		for (int i = 0; i < 100; i++) {
+			System.out.println("Hello Runnable!" + i);
+		}
+	}
+}
+
+/**
+ * 线程接口Runnable 示例类
  * 
  * @author getan
  * 
@@ -24,22 +40,5 @@ public class P200SayHelloRunnable {
 		}
 
 		/** main方法的主线程结束 */
-	}
-}
-
-/**
- * 多线程编程<BR>
- * 使用实现Runnable接口方式实现
- * 
- * @author getan
- * 
- */
-class SayHelloRunnable implements Runnable {
-	@Override
-	public void run() {// 重写父类方法
-		// 循环输出1-1000的整数
-		for (int i = 0; i < 100; i++) {
-			System.out.println("Hello Runnable!" + i);
-		}
 	}
 }
