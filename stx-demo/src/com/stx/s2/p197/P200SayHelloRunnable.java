@@ -1,7 +1,8 @@
 package com.stx.s2.p197;
 
 /**
- * 线程接口Runnable 示例类
+ * 多线程编程<BR>
+ * 使用实现线程接口Runnable方式实现
  * 
  * @author getan
  * 
