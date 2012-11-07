@@ -1,6 +1,23 @@
 package com.stx.s2.p197;
 
 /**
+ * 多线程编程<BR>
+ * 使用继承线程类Thread方式实现
+ * 
+ * @author getan
+ * 
+ */
+class SayHelloThread extends Thread {
+	@Override
+	public void run() {// 重写父类方法
+		// 循环输出1-1000的整数
+		for (int i = 0; i < 1000; i++) {
+			System.out.println("Hello World,thread0!" + i);
+		}
+	}
+}
+
+/**
  * 线程类Thread 示例类
  * 
  * @author getan
@@ -9,15 +26,19 @@ package com.stx.s2.p197;
 public class P198SayHello {
 
 	public static void main(String[] args) {
-		// 创建线程类Thread的子类的对象
-		SayHelloThread thread = new SayHelloThread();
-		// 启动一个线程
-		thread.start();
+		/** main方法的主线程开始 */
 
-		for (int i = 0; i < 100; i++) {
-			System.out.println("run main!" + i);
+		// 创建线程类Thread的子类的对象
+		SayHelloThread thread0 = new SayHelloThread();
+		// 启动另一个线程
+		thread0.start();
+
+		// 在main方法的主线程中 循环输出1-1000的整数
+		for (int i = 0; i < 1000; i++) {
+			System.out.println("main thread!" + i);
 		}
 
+		/** main方法的主线程结束 */
 	}
 
 }
