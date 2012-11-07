@@ -30,7 +30,7 @@ public class P198SayHello {
 
 		// 创建线程类Thread的子类的对象
 		SayHelloThread thread0 = new SayHelloThread();
-		// 启动另一个线程
+		// 启动一个新线程
 		thread0.start();
 
 		// 在main方法的主线程中 循环输出1-1000的整数
