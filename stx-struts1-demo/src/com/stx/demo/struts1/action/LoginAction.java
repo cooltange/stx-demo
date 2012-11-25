@@ -18,25 +18,25 @@ public class LoginAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		// »ñµÃµÇÂ¼form¶ÔÏó
+		// èŽ·å¾—ç™»å½•formå¯¹è±¡
 		LoginForm loginForm = (LoginForm) form;
-		// »ñµÃÓÃ»§Ãû
+		// èŽ·å¾—ç”¨æˆ·å
 		String myName = loginForm.getMyName();
-		// »ñµÃÓÃ»§ÃÜÂë
+		// èŽ·å¾—ç”¨æˆ·å¯†ç 
 		String myPassword = loginForm.getMyPassword();
 
-		// ÅÐ¶ÏÓÃ»§ÃûÃÜÂëÊÇ·ñºÏ·¨
+		// åˆ¤æ–­ç”¨æˆ·åå¯†ç æ˜¯å¦åˆæ³•
 		if ("admin".equals(myName) && "admin".equals(myPassword)) {
-			// µ¼º½forward =>"success"
+			// å¯¼èˆªforward =>"success"
 			return mapping.findForward("success");
 		} else {
-			// ·Ç·¨Ê±,Ìí¼Ó´íÎóÐÅÏ¢
+			// éžæ³•æ—¶,æ·»åŠ é”™è¯¯ä¿¡æ¯
 			ActionMessages ams = new ActionMessages();
 			ActionMessage am = new ActionMessage("message.namePasswordError");
 			ams.add("error", am);
-			// ±£´æ´íÎóÐÅÏ¢ÖÁrequestÖÐ
+			// ä¿å­˜é”™è¯¯ä¿¡æ¯è‡³requestä¸­
 			saveErrors(request, ams);
-			// µ¼º½forward =>"failure"
+			// å¯¼èˆªforward =>"failure"
 			return mapping.findForward("failure");
 		}
 
