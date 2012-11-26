@@ -8,9 +8,9 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 
 public class LoginForm extends ActionForm {
-	// ÓÃ»§Ãû
+	// ç”¨æˆ·å
 	private String myName = null;
-	// ÃÜÂë
+	// å¯†ç 
 	private String myPassword = null;
 
 	public String getMyName() {
