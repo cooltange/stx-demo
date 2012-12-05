@@ -7,7 +7,7 @@ package com.stx.demo.spring.monitor;
  * 
  */
 public abstract class Monitor {
-	double size;
+	protected double size;
 
 	public abstract String show();
 

@@ -10,7 +10,7 @@ public class InterCPU extends CPU {
 
 	@Override
 	public String show() {
-		return "高性能的英特尔";
+		return coreNo + "核的高性能的英特尔";
 	}
 
 }

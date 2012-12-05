@@ -18,9 +18,11 @@ public class Test {
 	public static void main(String[] args) {
 		// 选购显示器
 		Monitor monitor = new LCD();
+		monitor.setSize(17);
 
 		// 选购CPU
 		CPU cpu = new AmdCPU();
+		cpu.setCoreNo(2);
 
 		// 装配
 		Computer computer = new Computer();

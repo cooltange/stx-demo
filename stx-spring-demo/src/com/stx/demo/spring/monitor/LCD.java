@@ -9,7 +9,7 @@ public class LCD extends Monitor {
 
 	@Override
 	public String show() {
-		return "我是小苗条显示器";
+		return size + "寸的小苗条显示器";
 	}
 
 }

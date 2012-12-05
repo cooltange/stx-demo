@@ -9,7 +9,7 @@ package com.stx.demo.spring.monitor;
 public class CRT extends Monitor {
 	@Override
 	public String show() {
-		return "我是大屁股显示器";
+		return size + "大屁股显示器";
 	}
 
 }

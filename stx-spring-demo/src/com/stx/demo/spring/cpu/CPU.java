@@ -7,7 +7,7 @@ package com.stx.demo.spring.cpu;
  * 
  */
 public abstract class CPU {
-	private int coreNo;
+	protected int coreNo;
 	public CPU(int coreNo) {
 		this.coreNo = coreNo;
 	}

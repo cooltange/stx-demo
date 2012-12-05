@@ -14,9 +14,13 @@
 	</bean>
 
 	<!-- 定义cpu -->
-	<bean id="cpuBean" class="com.stx.demo.spring.cpu.InterCPU"></bean>
+	<bean id="cpuBean" class="com.stx.demo.spring.cpu.InterCPU">
+		<property name="coreNo" value="4"></property>
+	</bean>
 
 	<!-- 定义显示器 -->
-	<bean id="monitorBean" class="com.stx.demo.spring.monitor.LCD"></bean>
+	<bean id="monitorBean" class="com.stx.demo.spring.monitor.LCD">
+		<property name="size" value="19"></property>
+	</bean>
 
 </beans>
