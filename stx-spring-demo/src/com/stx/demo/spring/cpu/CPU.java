@@ -8,12 +8,8 @@ package com.stx.demo.spring.cpu;
  */
 public abstract class CPU {
 	private int coreNo;
-	private int frq;
-	private String name;
-
-	public CPU(int coreNo, String name) {
+	public CPU(int coreNo) {
 		this.coreNo = coreNo;
-		this.name = name;
 	}
 
 	public abstract String show();
@@ -29,19 +25,4 @@ public abstract class CPU {
 		this.coreNo = coreNo;
 	}
 
-	public int getFrq() {
-		return frq;
-	}
-
-	public void setFrq(int frq) {
-		this.frq = frq;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 }

@@ -8,13 +8,11 @@ package com.stx.demo.spring.monitor;
  */
 public abstract class Monitor {
 	double size;
-	String name;
 
 	public abstract String show();
 
-	public Monitor(double size, String name) {
+	public Monitor(double size) {
 		this.size = size;
-		this.name = name;
 	}
 
 	public Monitor() {
@@ -28,11 +26,4 @@ public abstract class Monitor {
 		this.size = size;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 }
